@@ -4,7 +4,7 @@
  * 🎯 MENU SECTION - Tab-uri categorii + Grid produse cu imagini
  */
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const menuData = {
   Espresso: [
@@ -107,10 +107,9 @@ export default function Menu() {
             <div
               key={item.name}
               className="group rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 flex flex-col"
-              style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.06)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', backgroundColor: '#ffeddf' }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 40px rgba(0,0,0,0.18)'; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}
-              style={{ backgroundColor: '#ffeddf' }}
             >
               {/* IMAGINE - aspect ratio 4:3 */}
               <div className="aspect-[4/3] overflow-hidden">
