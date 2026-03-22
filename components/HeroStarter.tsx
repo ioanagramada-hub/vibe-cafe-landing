@@ -12,12 +12,12 @@ export default function HeroStarter() {
       <div className="max-w-4xl mx-auto px-6 text-center text-white">
         {/* TITLU PRINCIPAL */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          Vibe Caffè
+          O ceașcă, o poveste
         </h1>
 
         {/* SUBTITLU */}
         <p className="text-xl md:text-2xl mb-8 text-white/90">
-          Cafeaua ta preferată, perfect preparată
+          Pentru cei care știu diferența dintre o cafea bună și una memorabilă
         </p>
 
         {/* BUTON CTA */}
