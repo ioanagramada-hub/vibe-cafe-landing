@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 @keyframes chevronPulse {
   0%, 100% { opacity: 0.15; }
   50%       { opacity: 1; }

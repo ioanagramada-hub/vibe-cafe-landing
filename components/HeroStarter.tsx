@@ -57,7 +57,7 @@ export default function HeroStarter() {
             opacity: 0,
           }}
         >
-          O ceașcă, o poveste
+          Fiecare ceașcă, o poveste
         </h1>
 
         {/* SUBTITLU */}
@@ -82,7 +82,7 @@ export default function HeroStarter() {
 
           {/* BUTON 1 - Vezi Meniul */}
           <a
-            href="#meniu"
+            href="#menu"
             className="inline-block px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10"
           >
             Vezi Meniul
@@ -109,7 +109,7 @@ export default function HeroStarter() {
 
       {/* SCROLL INDICATOR — 3 chevrons animate secvențial + ceașcă la hover */}
       <a
-        href="#footer"
+        href="#features"
         className="group absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white"
         style={{ animation: 'fadeInUp 0.8s ease-out 3.0s forwards', opacity: 0 }}
         aria-label="Scroll în jos"
