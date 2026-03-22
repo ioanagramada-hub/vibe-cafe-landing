@@ -53,7 +53,7 @@ export default function HeroStarter() {
           className="text-7xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight"
           style={{
             textShadow: '0 4px 24px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)',
-            animation: 'fadeInUp 0.8s ease-out 0.5s forwards',
+            animation: 'fadeInUp 0.8s ease-out 1.0s forwards',
             opacity: 0,
           }}
         >
@@ -62,12 +62,12 @@ export default function HeroStarter() {
 
         {/* SUBTITLU */}
         <p
-          className="mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed"
+          className="mb-[4.4rem] text-white/90 max-w-3xl mx-auto leading-relaxed"
           style={{
             fontFamily: 'var(--font-dancing)',
             fontSize: 'clamp(1.25rem, 3vw, 1.875rem)',
             textShadow: '0 2px 12px rgba(0,0,0,0.7)',
-            animation: 'fadeInUp 0.8s ease-out 0.8s forwards',
+            animation: 'fadeInUp 0.8s ease-out 1.6s forwards',
             opacity: 0,
           }}
         >
@@ -77,49 +77,86 @@ export default function HeroStarter() {
         {/* BUTOANE CTA */}
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          style={{ animation: 'fadeInUp 0.8s ease-out 1.1s forwards', opacity: 0 }}
+          style={{ animation: 'fadeInUp 0.8s ease-out 2.2s forwards', opacity: 0 }}
         >
 
-          {/* BUTON 1 - Primary: Vezi Meniul */}
+          {/* BUTON 1 - Vezi Meniul */}
           <a
             href="#meniu"
-            className="inline-block px-8 py-4 bg-amber-600 hover:bg-amber-500 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="inline-block px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10"
           >
             Vezi Meniul
           </a>
 
-          {/* BUTON 2 - Secondary: Vizitează-ne */}
+          {/* BUTON 2 - Vizitează-ne */}
           <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10"
+            className="inline-block px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10"
           >
             Vizitează-ne
+          </a>
+
+          {/* BUTON 3 - Comandă TO GO */}
+          <a
+            href="#comanda"
+            className="inline-block px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white/10"
+          >
+            Comandă TO GO
           </a>
 
         </div>
       </div>
 
-      {/* SCROLL INDICATOR */}
+      {/* SCROLL INDICATOR — 3 chevrons animate secvențial + ceașcă la hover */}
       <a
         href="#footer"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/75 hover:text-orange-500 transition-colors duration-300"
-        style={{ animation: 'fadeInUp 0.8s ease-out 1.5s forwards', opacity: 0 }}
+        className="group absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white"
+        style={{ animation: 'fadeInUp 0.8s ease-out 3.0s forwards', opacity: 0 }}
         aria-label="Scroll în jos"
       >
-        <div className="animate-bounce">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="36"
-          height="36"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M6 9l6 6 6-6" />
-        </svg>
+        {/* Cele 3 chevron-uri — dispar la hover */}
+        <div className="flex flex-col items-center group-hover:opacity-0 group-hover:scale-75 transition-all duration-300">
+          {[{ w: 34, h: 22 }, { w: 26, h: 17 }, { w: 18, h: 12 }].map((size, i) => (
+            <svg
+              key={i}
+              xmlns="http://www.w3.org/2000/svg"
+              width={size.w}
+              height={size.h}
+              viewBox="0 0 24 14"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{
+                animation: `chevronPulse 1.2s ease-in-out ${i * 0.3}s infinite`,
+                opacity: 0.15,
+              }}
+            >
+              <path d="M3 2l9 9 9-9" />
+            </svg>
+          ))}
+        </div>
+
+        {/* Ceașcă de cafea — apare la hover */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="70"
+            height="70"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M7 3c0 0 1 1 0 2s-1 2 0 3" />
+            <path d="M11 3c0 0 1 1 0 2s-1 2 0 3" />
+            <path d="M5 9h11l-1.5 8H6.5L5 9z" />
+            <path d="M16 11h2a2 2 0 0 1 0 4h-2" />
+            <path d="M4 19h13" />
+          </svg>
         </div>
       </a>
 

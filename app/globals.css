@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@keyframes chevronPulse {
+  0%, 100% { opacity: 0.15; }
+  50%       { opacity: 1; }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
