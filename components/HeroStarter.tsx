@@ -47,7 +47,7 @@ export default function HeroStarter() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* CONȚINUT - deasupra imaginii și overlay-ului */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white pb-20 md:pb-0">
         {/* TITLU PRINCIPAL */}
         <h1
           className="text-7xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight"
@@ -110,7 +110,7 @@ export default function HeroStarter() {
       {/* SCROLL INDICATOR — 3 chevrons animate secvențial + ceașcă la hover */}
       <a
         href="#features"
-        className="group absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white"
+        className="group absolute bottom-4 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white"
         style={{ animation: 'fadeInUp 0.8s ease-out 3.0s forwards', opacity: 0 }}
         aria-label="Scroll în jos"
       >
