@@ -41,3 +41,31 @@ export async function citesteRezervari() {
 
   return { success: true, data };
 }
+
+export type Status = 'în așteptare' | 'confirmat' | 'respins';
+
+export async function schimbaStatus(id: number, status: Status) {
+  const { error } = await supabase
+    .from('rezervari')
+    .update({ status })
+    .eq('id', id);
+
+  if (error) {
+    return { success: false, message: 'Nu s-a putut schimba statusul.' };
+  }
+
+  return { success: true, message: 'Status actualizat.' };
+}
+
+export async function stergeRezervare(id: number) {
+  const { error } = await supabase
+    .from('rezervari')
+    .delete()
+    .eq('id', id);
+
+  if (error) {
+    return { success: false, message: 'Nu s-a putut șterge rezervarea.' };
+  }
+
+  return { success: true, message: 'Rezervarea a fost ștearsă.' };
+}
